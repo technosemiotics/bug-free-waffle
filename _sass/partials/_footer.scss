@@ -1,0 +1,126 @@
+// SITE FOOTER
+
+.site-footer {
+  border-top: 2px solid $accent-border;
+  padding: $spacing-unit 0;
+  background-color: $accent-background;
+
+  a {
+    color: $footer-link-color !important;
+    &:hover,
+    &:focus {
+      color: $footer-link-hover-color !important;
+    }
+  }
+}
+
+.footer-heading {
+  @include relative-font-size(1.125);
+  margin-bottom: $spacing-unit * .5;
+}
+
+.feed-subscribe .svg-icon {
+  padding: 5px 5px 2px 0
+}
+
+.contact-list,
+.social-media-list {
+  list-style: none;
+  margin-left: 0;
+}
+
+.footer-col-wrapper,
+.social-links {
+  @include relative-font-size(0.9375);
+  color: $footer-link-color;
+
+  div {
+    margin-bottom: 1rem;
+  }
+}
+
+.footer-col {
+  margin-bottom: $spacing-unit * .5;
+}
+
+.footer-col-1,
+.footer-col-2 {
+  width: calc(50% - (#{$spacing-unit} / 2));
+}
+
+.footer-col-3 {
+  width: calc(100% - (#{$spacing-unit} / 2));
+}
+
+@media screen and (min-width: $on-large) {
+  .footer-col-1 {
+    width: calc(35% - (#{$spacing-unit} / 2));
+  }
+
+  .footer-col-2 {
+    width: calc(20% - (#{$spacing-unit} / 2));
+  }
+
+  .footer-col-3 {
+    width: calc(45% - (#{$spacing-unit} / 2));
+  }
+}
+
+@media screen and (min-width: $on-medium) {
+  .footer-col-wrapper {
+    display: flex
+  }
+
+  .footer-col {
+    width: calc(100% - (#{$spacing-unit} / 2));
+    padding: 0 ($spacing-unit * .5);
+
+    &:first-child {
+      padding-right: $spacing-unit * .5;
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+      padding-left: $spacing-unit * .5;
+    }
+  }
+}
+
+// Social links
+.social-media-list {
+  display: table;
+  margin: 0;
+  li {
+    float: left;
+    min-width: 25px;
+    min-height: 25px;
+    text-align: center;
+    margin: 5px 10px 5px 0;
+    &:last-of-type { margin-right: 0 }
+    a {
+      display: block;
+      padding: 0;
+
+      svg {
+      width: 1.4rem;
+      height:1.4rem;
+      fill: $footer-link-color;
+
+      &:hover {
+        fill: $footer-link-hover-color;
+      }
+    }
+    }
+  }
+}
+
+/* redesigned-memory added footer styles */
+
+.footer-nav {
+  a.nav-item {
+    display: block;
+  }
+}
+
+

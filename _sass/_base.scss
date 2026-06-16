@@ -1,0 +1,187 @@
+// design based on Minima skin
+
+html {
+  font-size: $base-font-size;
+}
+
+/**
+ * Reset some basic elements
+ */
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+  margin: 0;
+  padding: 0;
+
+}
+
+
+
+/**
+ * Basic styling
+ */
+body {
+  background-color: $body-background-color;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  overflow-wrap: break-word;
+}
+
+
+
+/**
+ * Set `margin-bottom` to maintain vertical rhythm
+ */
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure,
+%vertical-rhythm {
+  margin-bottom: $spacing-unit * .5;
+}
+
+hr {
+  margin-top: $spacing-unit;
+  margin-bottom: $spacing-unit;
+}
+
+/**
+ * `main` element
+ */
+main {
+  display: block; /* Default value of `display` of `main` element is 'inline' in IE 11. */
+}
+
+
+
+/**
+ * Images
+ */
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+
+
+/**
+ * Figures
+ */
+figure > img {
+  display: block;
+}
+
+figcaption {
+  font-size: $small-font-size;
+}
+
+
+
+/**
+ * Lists
+ */
+ul, ol {
+  margin-left: $spacing-unit;
+}
+
+li {
+  > ul,
+  > ol {
+    margin-bottom: 0;
+  }
+}
+
+
+
+
+
+/**
+ * Clearfix
+ */
+%clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+/**
+ * Tables
+ */
+table {
+  margin-bottom: $spacing-unit;
+  width: 100%;
+  text-align: $table-text-align;
+  color: $table-text-color;
+  border-collapse: collapse;
+  border: 1px solid $table-border-color;
+  tr {
+    &:nth-child(even) {
+      background-color: $table-zebra-color;
+    }
+  }
+  th, td {
+    padding: ($spacing-unit * 33.3333333333 * .01) ($spacing-unit * .5);
+  }
+  th {
+    background-color: $table-header-bg-color;
+    border: 1px solid $table-header-border;
+  }
+  td {
+    border: 1px solid $table-border-color;
+  }
+
+  @include media-query($on-laptop) {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+            -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+}
+
+
+
+
+
+/* redesigned-memory added elements */
+.spacer {
+  display: block;
+  height: $spacing-unit;
+}
+
+.spacer-clearfix {
+  display: block;
+  height: $spacing-unit;
+  width: 100%;
+  clear: both;
+}
+
+.hide {
+  display: none;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.left {
+  text-align: left;
+}
+.right {
+  text-align: right;
+}
+.center {
+  text-align: center;
+}
+
+.float-right {
+  float:right;
+}
+.float-left {
+  float: left;
+}

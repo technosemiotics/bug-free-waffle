@@ -1,0 +1,40 @@
+---
+---
+
+@import
+  "variables/base-variables",
+  "variables/color-variables"
+;
+
+
+
+@import
+  "base",             // Defines element resets.
+  "typography",
+  "backgrounds",
+  "layout";           // Defines structure and style based on CSS selectors.
+
+@import
+  "partials/header",    // Defines element resets.
+  "partials/footer",    // Defines structure and style based on CSS selectors.
+  "partials/labels",
+  "partials/embeds",
+  "partials/card",
+  "partials/resource",
+  "partials/content",
+  "partials/content-navigation"
+;
+
+
+
+
+
+
+
+
+
+
+
+
+
+

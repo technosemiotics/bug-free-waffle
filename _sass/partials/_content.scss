@@ -1,0 +1,105 @@
+/**
+ * Page content
+ */
+.page-content {
+  padding: $spacing-unit 0;
+  flex: 1 0 auto;
+
+  img.featured {
+    width: 100%;
+    height: auto;
+  }  
+}
+
+.page-heading {
+  @include relative-font-size(2);
+}
+
+.post-list-heading {
+  @include relative-font-size(1.75);
+}
+
+.post-list {
+  margin-left: 0;
+  list-style: none;
+
+  > li {
+    margin-bottom: $spacing-unit;
+  }
+}
+
+.post-header {
+  padding: 2em 0;
+  margin-bottom: 0;
+}
+
+
+.post-link {
+  display: block;
+  @include relative-font-size(1.2);
+}
+
+.post-meta {
+  font-weight: 200;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: inherit;
+
+  a.tomato {
+    border-bottom: none;
+
+    img {
+    width: 2.5em;
+    height: 2.5em;
+    filter: grayscale(100%);
+
+    &:hover {
+      filter: none;
+    }
+    
+  }
+  }
+  .meta-label {
+    font-weight: 200;
+  }
+
+
+
+}
+
+
+
+/* post content */
+
+.post-content {
+  margin-bottom: $spacing-unit;
+
+  h1, h2, h3, h4, h5, h6 { margin-top: $spacing-unit }
+
+  h2 {
+    @include relative-font-size(1.75);
+
+    @media screen and (min-width: $on-large) {
+      @include relative-font-size(2);
+    }
+  }
+
+  h3 {
+    @include relative-font-size(1.375);
+
+    @media screen and (min-width: $on-large) {
+      @include relative-font-size(1.625);
+    }
+  }
+
+  h4 {
+    @include relative-font-size(1.25);
+  }
+
+  h5 {
+    @include relative-font-size(1.125);
+  }
+  h6 {
+    @include relative-font-size(1.0625);
+  }
+}

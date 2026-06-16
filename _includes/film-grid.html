@@ -1,0 +1,16 @@
+
+    <main class="content">
+      <section class="content-grid">
+        <div class="container">
+          <div class="film-grid" itemscope="" itemtype="http://schema.org/Blog">
+
+            {% for film in site.films %}
+              {% include film-card.html %}
+            {% endfor %}
+
+          </div>
+        </div>
+      </section>
+    </main>
+    <div class="spacer"></div>
+    
