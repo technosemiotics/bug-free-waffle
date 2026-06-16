@@ -1,0 +1,184 @@
+
+/**
+ * Grid helpers
+ */
+@media screen and (min-width: $on-large) {
+  .one-half {
+    width: calc(50% - (#{$spacing-unit} / 2));
+  }
+}
+
+
+
+// adapted from Jekyll Sleek theme by Jan Czizikow
+
+
+@mixin clearfix {
+  &::before {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin container($breakpoint) {
+  margin: 0 auto;
+  @if ($breakpoint != 0) {
+    max-width: $breakpoint;
+  } @else {
+    max-width: 100%;
+  }
+}
+
+@mixin breakpoint($query) {
+  @media only screen and (min-width:#{$query}) {
+    @content;
+  }
+}
+
+
+// main block styles. container is wide, wrapper is narrow
+
+/**
+ * Container
+ */
+
+.container {
+  padding: 0 20px;
+  @include container(0);
+
+  @include breakpoint($sm) {
+    @include container(540px);
+  }
+
+  @include breakpoint($md) {
+    @include container(720px);
+  }
+
+  @include breakpoint($lg) {
+    @include container(960px);
+  }
+
+  @include breakpoint($xl) {
+    @include container(1170px);
+  }
+}
+
+
+
+/**
+ * Wrapper
+ */
+.wrapper {
+  max-width: $content-width;
+  margin: 0 auto;
+  padding: 0 $spacing-unit;
+  @extend %clearfix;
+
+  @media screen and (max-width: $on-medium) {
+    padding-right: $spacing-unit * 0.6;
+    padding-left: $spacing-unit * 0.6;
+  }
+}
+
+
+
+
+// redesigned-memory hero block, use with container inside
+
+.hero-rm {
+  width: 100%;
+  padding: 3rem 0;
+  margin: 0;
+
+  img {
+    width: 100%;
+  }
+
+  @include breakpoint($md) {
+    img {
+      max-width: 465px;
+    }    
+  }
+
+  @include breakpoint($xl) {
+    img {
+      max-width: 365.63px;
+    }
+  }
+  &.film-navigation {
+    padding: 0;
+
+    .controls__inner {
+      border-top: none;
+    }
+  }
+}
+
+main.home {
+  .hero-rm.first {
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+  }
+}
+
+// internal content blocks for hero
+
+.hero-1-left, .hero-2-left {
+  float: left;
+  margin-right: 3.125%;
+}
+.hero-1-right, .hero-2-right {
+  float: right;
+}
+
+.hero-1-left, .hero-1-right, .hero-33 {
+
+  width: 31.25%;
+  position: relative;
+
+  @include breakpoint($lg) {
+    width: 31.25%;
+    margin-right: 3.125%;
+
+  }
+
+  @include breakpoint($md) {
+    width: 48.4375%;
+    /*max-width: 48.4375%;*/
+    margin-right: 3.125%;
+
+    &:last-of-type,
+    &:nth-child(2n+2) {
+      margin-right: 0;
+    }
+  }
+
+}
+
+.hero-2-left, .hero-2-right, .hero-66 {
+  width: 65.625%;
+  position: relative;
+
+  @include breakpoint($lg) {
+    width: 65.625%;
+    margin-right: 3.125%;
+  }
+
+  @include breakpoint($md) {
+    width: 48.4375%;
+    /*max-width: 48.4375%;*/
+    margin-right: 3.125%;
+
+    &:last-of-type,
+    &:nth-child(2n+2) {
+      margin-right: 0;
+    }
+  }
+}
