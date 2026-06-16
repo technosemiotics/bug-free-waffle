@@ -1,0 +1,40 @@
+title: "technosemiotics: sci-fi database"
+tagline: tracing ideas and tropes in science fiction movies
+description: >
+  Tracing ideas and tropes in science fiction movies 
+
+
+# COLLECTIONS and DEFAULT settings ## TS ##
+
+collections:
+  pages:
+    output: true
+    permalink: /:name/
+  films:
+    output: true
+    permalink: /films/:name/
+
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "base"
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "films"
+    values:
+      layout: "film"
+
+# Technosemiotics social links
+
+social:
+    zenodo: "https://zenodo.org/communities/technosemiotics/"
+    linkedin: "https://www.linkedin.com/company/technosemiotics"
+    github: "https://github.com/technosemiotics"
+    youtube: "https://www.youtube.com/@technosemiotics"
+    instagram: "https://www.instagram.com/semiotictechnologies/"
+
+
